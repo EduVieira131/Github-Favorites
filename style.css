@@ -1,0 +1,173 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+
+  --ff-body: 'Poppins', sans-serif;
+  --text-color: #333333;
+
+  --hue: 263;
+  --primary-color: hsl(var(--hue), 100%, 83%); 
+}
+
+/* Components style */
+
+body {
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background-color: #e2e2e2;
+}
+
+body * {
+  font-family: var(--ff-body);
+}
+
+#app {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 2.5rem 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  box-shadow: 0 1rem 2rem -1rem rgba(0,0,0,0.3);
+}
+
+table * {
+  font-size: 1.4rem;
+  color: var(--text-color);
+}
+
+/* Utils */
+.sr-only {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Specifc components */
+header h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.searchWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.searchWrapper input {
+  height: 3.2rem;
+  padding: 0 .8rem;
+
+  border: 1px solid #ccc;
+  border-radius: .4rem 0 0 .4rem;
+}
+
+.searchWrapper button {
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 0 .4rem .4rem 0;
+
+  height: 3.2rem;
+  padding: 0 1rem;
+
+  cursor: pointer;
+}
+
+.searchWrapper button:hover {
+  filter: brightness(1.2);
+}
+
+table th {
+  background: var(--primary-color);
+  text-align: left;
+
+  font-weight: normal;
+
+  padding: 1rem;
+}
+
+table th:first-child {
+  border-top-left-radius: .4rem;
+}
+
+table th:last-child {
+  border-top-right-radius: .4rem;
+}
+
+table tr td:first-child{
+  border-bottom-left-radius: .4rem;
+}
+
+table tr td:last-child{
+  border-bottom-right-radius: .4rem;
+}
+
+table tr:nth-child(even) {
+  background: var(--primary-color);
+}
+
+table tr:nth-child(odd) {
+  background: #ddd;
+}
+
+table td {
+  padding: 1rem;
+  width: fit-content;
+
+  text-align: left;
+}
+
+table.user td {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+td.user img {
+  width: 5rem;
+  height: 5rem;
+
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+td.user a {
+  text-decoration: none;
+}
+
+td.user a p {
+  font-weight: bold;
+}
+
+td .removeItem {
+  background: none;
+  border: none;
+  
+  color: red;
+  cursor: pointer;
+}
